@@ -1,0 +1,12 @@
+
+<div class="faq-section" markdown=1>
+## {{include.category | capitalize  }}
+
+{% for f in site.data.faq[include.category] %}
+### {{f.question }}{: .faq-answer}
+{{ f.answer }}{: faq-question}
+
+{{ f.tags | join: ', '}}{: faq-tags}
+{% endfor %}
+
+</div>

@@ -1,0 +1,48 @@
+<section class="article-head">
+
+{% if page.deprecated %}
+{% include deprecated.html %}
+{% endif %}
+
+{% if page.out_of_date %}
+{% include out_of_date.html %}
+{% endif %}
+
+<div class="article-head-title">
+    {% if page.title_image %}
+    <div class="article-head-title-image" style="background-image: url({{ page.title_image | relative_url }})"></div>
+    {% endif %}
+
+    <h1 class="no_toc">
+    {{page.title}}
+    </h1>
+    
+    <div class="meta-data-section">
+        <a 
+            class="editme public" 
+            style="background-image: url({{ 'themes/uadocs/assets/images/editme.png' | relative_url }})" 
+            href="{{site.editme | replace: '__PATH__', page.path }}">                    
+            Edit me
+        </a>
+        <div class="last-modified">{{ page.last_modified_at | date: '%B %d, %Y' }}</div>
+    </div>
+</div>
+<div style="clear:both"></div>
+
+{% if page.quicklinks %}
+{% include quicklinks.html quicklinks=page.quicklinks %}
+{% endif %}
+
+{% if page.summary %}
+<div class="article-head-summary">
+{{ page.summary }}
+</div>
+{% endif %}
+
+{% unless page.hide_local_toc == true %}
+<div class="article-head-toc" markdown="1">
+{% include toc.md %}
+</div>
+{% endunless %}
+
+</section>

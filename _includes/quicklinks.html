@@ -1,0 +1,18 @@
+<div class="quicklinks">
+    <h2>Quicklinks</h2>
+
+    <ul>
+    {% for link in include.quicklinks %}
+        {% if link.link contains "http" %}
+            {% assign url=link.link%}
+        {% else %}
+            {% capture url %}{{ link.link | relative_url }}{% endcapture %}
+        {% endif%}
+
+        <li><a href="{{url}}">
+            {{link.title}}
+        </a></li>
+    {% endfor %}
+    </ul>
+    
+</div>
