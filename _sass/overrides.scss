@@ -15,6 +15,30 @@
     color: #691515;
 }
 
+
+.ua-docroot-block {
+  float:left;
+  margin:10px;
+  padding:10px;
+  background-color: #efefef;
+  width: 300px;
+  background-image: url('/engineering/assets/images/external-link.png');
+  background-repeat: no-repeat;
+  background-position: 95% 10px;
+  background-size: 24px 24px;
+  background-origin: padding-box;
+
+
+  & h1 {
+    font-weight: bold;
+  }
+
+  & .ua-docroot-block-description {
+    font-size: 0.8em;  
+    overflow: hidden;
+  }
+}
+
 ul.ua-index {
 
     li:before {
