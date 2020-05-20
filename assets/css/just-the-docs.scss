@@ -7,7 +7,8 @@
 $logo: "{{ site.logo | relative_url }}";
 {% endif %}
 
-$icon_important: "{{ 'assets/images/icon_note.png' | relative_url }}";
+$icon_note: "{{ 'assets/images/icon_note.png' | relative_url }}";
+$icon_important: "{{ 'assets/images/icon_important.png' | relative_url }}";
 
 //
 // Import external dependencies

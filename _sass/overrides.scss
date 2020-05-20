@@ -20,22 +20,21 @@
   float:left;
   margin:10px;
   padding:10px;
-  background-color: #efefef;
+  background-color: #fff;
   width: 300px;
-  background-image: url('/engineering/assets/images/external-link.png');
-  background-repeat: no-repeat;
-  background-position: 95% 10px;
-  background-size: 24px 24px;
-  background-origin: padding-box;
-
+  white-space: normal;
 
   & h1 {
     font-weight: bold;
+    font-size:0.9em !important;
+    border-bottom:1px solid #efefef;
   }
 
   & .ua-docroot-block-description {
     font-size: 0.8em;  
     overflow: hidden;
+    white-space: normal;
+    color: #333;
   }
 }
 
@@ -118,6 +117,17 @@ li.protected-node {
         margin: 0;        
         padding: 4px;
     }
+}
+
+.important {
+  padding: 12px 12px 12px 35px;
+  font-size: 0.9em;
+  background-color: rgb(248, 242, 209);
+  background-image: url($icon_important);
+  background-repeat:no-repeat;
+  background-position-x: 5px;
+  background-position-y: 12px;
+  border-left: 5px solid rgb(197, 115, 8);
 }
 
 .note {
